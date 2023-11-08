@@ -29,6 +29,34 @@ class MainActivity : AppCompatActivity() {
     viewModelFactory.create(MainViewModel::class.java)
   }
 
+  /**
+   * Called when the activity is starting. This is where most initialization should go:
+   * calling setContentView(int) to inflate the activity's UI, using findViewById(int) to
+   * programmatically interact with widgets in the UI, calling
+   * managedQuery(android.net.Uri, String[], String, String[], String) to retrieve
+   * cursors for data being displayed, etc.
+   *
+   * @param savedInstanceState If the activity is being re-initialized after previously
+   * being shut down then this Bundle contains the data it most recently supplied in
+   * onSaveInstanceState(Bundle). Note: Otherwise it is null.
+   *
+   * @throws RuntimeException if any error occurs during the execution of the method.
+   *
+   * @sample
+   * ```
+   * override fun onCreate(savedInstanceState: Bundle?) {
+   *     super.onCreate(savedInstanceState)
+   *     DataBindingUtil.setContentView<ActivityMainCoroutinesBinding>(this, R.layout.activity_main_coroutines).apply {
+   *         lifecycleOwner = this@MainActivity
+   *         viewModel = this@MainActivity.viewModel
+   *         adapter = PosterAdapter()
+   *     }
+   *     viewModel.toastLiveData.observe(this) {
+   *         Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+   *     }
+   * }
+   * ```
+   */
   override fun onCreate(savedInstanceState: Bundle?) {
     // sample commit
     super.onCreate(savedInstanceState)
