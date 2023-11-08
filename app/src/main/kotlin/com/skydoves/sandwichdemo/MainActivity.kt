@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    // sample commit
     super.onCreate(savedInstanceState)
     DataBindingUtil.setContentView<ActivityMainCoroutinesBinding>(
       this,
