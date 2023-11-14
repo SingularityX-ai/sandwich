@@ -25,7 +25,6 @@ class SandwichDemoApp : Application() {
 
   override fun onCreate() {
     super.onCreate()
-
     sandwichApp = this
 
 //    SandwichInitializer.sandwichOperators += GlobalResponseOperator<Any>(this)
