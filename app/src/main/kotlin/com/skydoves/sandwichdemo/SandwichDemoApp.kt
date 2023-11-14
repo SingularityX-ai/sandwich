@@ -23,6 +23,24 @@ import timber.log.Timber
 
 class SandwichDemoApp : Application() {
 
+  /**
+   * Called when the application is starting, before any activity, service, or receiver objects (excluding content providers) have been created.
+   *
+   * This method sets up the [sandwichApp] and plants a [Timber.DebugTree] if the build is in DEBUG mode.
+   *
+   * @throws Exception if an error occurs during the setup process.
+   *
+   * Example:
+   * ```
+   * override fun onCreate() {
+   *     super.onCreate()
+   *     sandwichApp = this
+   *     if (BuildConfig.DEBUG) {
+   *         Timber.plant(Timber.DebugTree())
+   *     }
+   * }
+   * ```
+   */
   override fun onCreate() {
     super.onCreate()
     sandwichApp = this
