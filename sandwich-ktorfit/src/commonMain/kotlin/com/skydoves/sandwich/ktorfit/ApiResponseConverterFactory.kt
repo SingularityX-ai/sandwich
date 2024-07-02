@@ -54,6 +54,7 @@ public class ApiResponseConverterFactory internal constructor() : Converter.Fact
           return apiResponse.operate().maps()
         }
       }
+      
     }
 
     return null
@@ -64,6 +65,7 @@ public class ApiResponseConverterFactory internal constructor() : Converter.Fact
     @JvmStatic
     public fun create(): ApiResponseConverterFactory {
       return ApiResponseConverterFactory()
+      
     }
   }
 }
