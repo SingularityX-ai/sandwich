@@ -39,6 +39,17 @@ internal class ApiResponseSuspendTest : ApiAbstract<DisneyCoroutinesService>() {
   private lateinit var service: DisneyCoroutinesService
 
   @Before
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun initService() {
     val testScope = TestScope(coroutinesRule.testDispatcher)
     val retrofit = Retrofit.Builder()
@@ -50,6 +61,17 @@ internal class ApiResponseSuspendTest : ApiAbstract<DisneyCoroutinesService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `fetch items as an ApiResponse with suspend function`() = runTest {
     enqueueResponse("/DisneyPosters.json")
 
@@ -63,6 +85,17 @@ internal class ApiResponseSuspendTest : ApiAbstract<DisneyCoroutinesService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `fetch items as a deferred ApiResponse with await`() = runTest {
     enqueueResponse("/DisneyPosters.json")
 

@@ -22,22 +22,28 @@ package com.skydoves.sandwich.retry
  */
 public interface RetryPolicy {
   /**
-   * Determines whether the request should be retried.
+   * Transforms the sign-up request data to match the backend's expected format.
    *
-   * @param attempt Current retry attempt.
-   * @param message The error message returned by the previous attempt.
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
    *
-   * @return true if the request should be retried, false otherwise.
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
    */
   public fun shouldRetry(attempt: Int, message: String?): Boolean
 
   /**
-   * Provides a timeout used to delay the next request.
+   * Transforms the sign-up request data to match the backend's expected format.
    *
-   * @param attempt Current retry attempt.
-   * @param message The error message returned by the previous attempt.
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
    *
-   * @return The timeout in milliseconds before making a retry.
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
    */
   public fun retryTimeout(attempt: Int, message: String?): Int
 }

@@ -31,6 +31,17 @@ import retrofit2.Response
 internal class ApiResponseExtensionsTest {
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `isSuccess test`() {
     val successResponse = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { successResponse }
@@ -40,6 +51,17 @@ internal class ApiResponseExtensionsTest {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `isFailure test`() {
     val response = Response.error<String>(
       403,
@@ -57,6 +79,17 @@ internal class ApiResponseExtensionsTest {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `isError test`() {
     val response = Response.error<String>(
       403,
@@ -75,6 +108,17 @@ internal class ApiResponseExtensionsTest {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `isException test`() {
     val apiResponse = ApiResponse.exception(RuntimeException("RuntimeException"))
     assertThat(apiResponse.isException, `is`(true))
@@ -83,6 +127,17 @@ internal class ApiResponseExtensionsTest {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun `messageOrNull test`() {
     val exception = ApiResponse.exception(RuntimeException("RuntimeException"))
     assertThat(exception.apiMessage, `is`("RuntimeException"))

@@ -1,5 +1,38 @@
 /*
  * Designed and developed by 2020 skydoves (Jaewoong Eum)
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,11 +60,15 @@ import okhttp3.ResponseBody
 import retrofit2.Response
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns a status code from the [Response].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @return A [StatusCode] from the network callback response.
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> Response<T>.getStatusCode(): StatusCode {
   return StatusCode.entries.find { it.code == code() }

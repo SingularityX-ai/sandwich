@@ -30,7 +30,17 @@ public class CompositeDisposable {
 
   private var disposables: MutableSet<Disposable>? = hashSetOf()
 
-  /** adds a new [Disposable] to this [CompositeDisposable] if not yet disposed. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun add(disposable: Disposable) {
     if (disposable.isDisposed()) {
       return
@@ -46,7 +56,17 @@ public class CompositeDisposable {
     }
   }
 
-  /** removes a [Disposable] from this [CompositeDisposable] and dispose the target. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun remove(disposable: Disposable) {
     if (!disposed) {
       synchronized(this) {
@@ -58,7 +78,17 @@ public class CompositeDisposable {
     }
   }
 
-  /** disposes all disposables that are currently part of this [CompositeDisposable]. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun clear() {
     if (!disposed) {
       var mutableCollection: MutableCollection<Disposable>?

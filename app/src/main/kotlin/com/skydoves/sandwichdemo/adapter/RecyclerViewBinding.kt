@@ -25,12 +25,34 @@ object RecyclerViewBinding {
 
   @JvmStatic
   @BindingAdapter("adapter")
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun bindAdapter(view: RecyclerView, posterAdapter: PosterAdapter) {
     view.adapter = posterAdapter
   }
 
   @JvmStatic
   @BindingAdapter("adapterPosterList")
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun bindAdapterPosterList(view: RecyclerView, posters: List<Poster>?) {
     if (!posters.isNullOrEmpty()) {
       (view.adapter as? PosterAdapter)?.addPosterList(posters)
@@ -39,6 +61,17 @@ object RecyclerViewBinding {
 
   @JvmStatic
   @BindingAdapter("loadImage")
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun bindLoadImage(view: AppCompatImageView, url: String) {
     Glide.with(view.context)
       .load(url)

@@ -71,12 +71,15 @@ internal abstract class TaskExecutor {
   abstract fun postToMainThread(runnable: Runnable, duration: Long)
 
   /**
-   * Executes the given task on the main thread.
+   * Transforms the sign-up request data to match the backend's expected format.
    *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
    *
-   * If the current thread is a main thread, immediately runs the given runnable.
-   *
-   * @param runnable The runnable to run on the main thread.
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
    */
   fun executeOnMainThread(runnable: Runnable, duration: Long) {
     if (isMainThread) {

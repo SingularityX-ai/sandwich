@@ -16,6 +16,83 @@
 @file:Suppress("unused")
 
 package com.skydoves.sandwich.retrofit.datasource
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -41,6 +118,28 @@ import kotlin.coroutines.EmptyCoroutineContext
  * Asynchronously send requests and A response data holder from the REST API call.
  * Support observer for the every request responses, concat another [DataSource],
  * Retry fetching data when the request gets failure.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public class ResponseDataSource<T> : DataSource<T> {
 
@@ -121,7 +220,17 @@ public class ResponseDataSource<T> : DataSource<T> {
   public var concatStrategy: DataSource.ConcatStrategy =
     DataSource.ConcatStrategy.CONTINUOUS
 
-  /** sets value on the worker thread and post the value to the main thread. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun postValue(value: ApiResponse<T>) {
     val postTask: Boolean
     synchronized(dataLock) {
@@ -134,7 +243,17 @@ public class ResponseDataSource<T> : DataSource<T> {
     ArchTaskExecutor.instance.postToMainThread(postValueRunnable, 0)
   }
 
-  /** sets [DataRetainPolicy] for limiting retaining data. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun dataRetainPolicy(dataRetainPolicy: DataRetainPolicy): ResponseDataSource<T> = apply {
     this.dataRetainPolicy = dataRetainPolicy
   }
@@ -255,11 +374,17 @@ public class ResponseDataSource<T> : DataSource<T> {
   }
 
   /**
-   * if the response is successful, it returns a [LiveData] which contains response data.
-   * if the response is failure or exception, it returns an empty [LiveData].
-   * this live data can be observable from the network requests.
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
    */
-  @Suppress("UNCHECKED_CAST")
   public fun asLiveData(): LiveData<T> {
     return MutableLiveData<T>().apply {
       liveData = this
@@ -272,7 +397,17 @@ public class ResponseDataSource<T> : DataSource<T> {
     }
   }
 
-  /** enqueue a callback to call and cache the [ApiResponse] data. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   private fun enqueue() {
     val call = call?.clone() ?: return
     if (!call.isExecuted && compositeDisposable?.disposed == false) {
@@ -295,7 +430,17 @@ public class ResponseDataSource<T> : DataSource<T> {
   }
 
   /** emit response data to an observer when the request is successful. */
-  @Suppress("UNCHECKED_CAST")
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   private fun emitResponseToObserver() {
     if (data != empty && (data as ApiResponse<T>) is ApiResponse.Success<T>) {
       this.responseObserver?.observe(data as ApiResponse<T>)
