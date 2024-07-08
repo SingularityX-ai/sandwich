@@ -73,6 +73,7 @@ public fun <T> ApiResponse<T>.getOrElse(defaultValue: T): T {
  */
 public inline fun <T> ApiResponse<T>.getOrElse(defaultValue: () -> T): T {
   return when (this) {
+    
     is ApiResponse.Success -> data
     is ApiResponse.Failure -> defaultValue()
   }
@@ -94,7 +95,6 @@ public fun <T> ApiResponse<T>.getOrThrow(): T {
     is ApiResponse.Success -> return data
     is ApiResponse.Failure.Error -> throw RuntimeException(message())
     is ApiResponse.Failure.Exception -> throw throwable
-    
   }
 }
 
@@ -133,7 +133,6 @@ public inline fun <T, V> ApiResponse<T>.onSuccess(
   mapper: ApiSuccessModelMapper<T, V>,
   crossinline onResult: V.() -> Unit,
 ): ApiResponse<T> {
-  
   contract { callsInPlace(onResult, InvocationKind.AT_MOST_ONCE) }
   if (this is ApiResponse.Success) {
     onResult(map(mapper))
@@ -182,7 +181,6 @@ public suspend inline fun <T, V> ApiResponse<T>.suspendOnSuccess(
   if (this is ApiResponse.Success) {
     onResult(map(mapper))
   }
-  
   return this
 }
 
