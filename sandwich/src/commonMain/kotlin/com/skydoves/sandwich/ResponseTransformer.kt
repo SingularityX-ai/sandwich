@@ -80,15 +80,18 @@ public inline fun <T> ApiResponse<T>.getOrElse(defaultValue: () -> T): T {
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Retrieves the data from the ApiResponse or throws an exception.
  *
- * Returns the encapsulated data if this instance represents [ApiResponse.Success] or
- * throws the encapsulated Throwable exception if it is [ApiResponse.Failure.Error] or [ApiResponse.Failure.Exception].
+ * @return the data if ApiResponse is successful
+ * @throws RuntimeException if ApiResponse is a failure with an error message
+ * @throws Throwable if ApiResponse is a failure with an exception
  *
- * @throws RuntimeException if it is [ApiResponse.Failure.Error] or
- * the encapsulated Throwable exception if it is [ApiResponse.Failure.Exception.throwable]
- *
- * @return The encapsulated data.
+ * Example:
+ * ```
+ * val response: ApiResponse<String> = ApiResponse.Success("Hello, World!")
+ * val data: String = response.getOrThrow()
+ * println(data) // Output: Hello, World!
+ * ```
  */
 public fun <T> ApiResponse<T>.getOrThrow(): T {
   when (this) {
