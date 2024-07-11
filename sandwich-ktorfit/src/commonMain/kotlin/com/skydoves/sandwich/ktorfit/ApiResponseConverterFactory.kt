@@ -54,7 +54,6 @@ public class ApiResponseConverterFactory internal constructor() : Converter.Fact
           return apiResponse.operate().maps()
         }
       }
-      
     }
 
     return null
