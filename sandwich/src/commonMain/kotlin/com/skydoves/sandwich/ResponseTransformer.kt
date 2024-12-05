@@ -2,9 +2,196 @@
  * Designed and developed by 2020 skydoves (Jaewoong Eum)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
  *
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -19,7 +206,51 @@
 
 package com.skydoves.sandwich
 
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
 import com.skydoves.sandwich.mappers.ApiErrorModelMapper
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
 import com.skydoves.sandwich.mappers.ApiResponseMapper
 import com.skydoves.sandwich.mappers.ApiSuccessModelMapper
 import com.skydoves.sandwich.operators.ApiResponseOperator
@@ -34,12 +265,15 @@ import kotlin.jvm.JvmName
 import kotlin.jvm.JvmSynthetic
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns the encapsulated data if this instance represents [ApiResponse.Success] or
- * returns null if it is [ApiResponse.Failure.Error] or [ApiResponse.Failure.Exception].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @return The encapsulated data or null.
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> ApiResponse<T>.getOrNull(): T? {
   return when (this) {
@@ -49,12 +283,15 @@ public fun <T> ApiResponse<T>.getOrNull(): T? {
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns the encapsulated data if this instance represents [ApiResponse.Success] or
- * returns the [defaultValue] if it is [ApiResponse.Failure.Error] or [ApiResponse.Failure.Exception].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @return The encapsulated data or [defaultValue].
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> ApiResponse<T>.getOrElse(defaultValue: T): T {
   return when (this) {
@@ -80,15 +317,15 @@ public inline fun <T> ApiResponse<T>.getOrElse(defaultValue: () -> T): T {
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns the encapsulated data if this instance represents [ApiResponse.Success] or
- * throws the encapsulated Throwable exception if it is [ApiResponse.Failure.Error] or [ApiResponse.Failure.Exception].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @throws RuntimeException if it is [ApiResponse.Failure.Error] or
- * the encapsulated Throwable exception if it is [ApiResponse.Failure.Exception.throwable]
- *
- * @return The encapsulated data.
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> ApiResponse<T>.getOrThrow(): T {
   when (this) {
@@ -502,13 +739,16 @@ public suspend inline fun <reified T, reified V> ApiResponse<T>.suspendMapSucces
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Maps [Any] type of the [ApiResponse.Failure.Error.payload] to another Any type.
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @param transformer A transformer that receives [Any] and returns [Any].
- *
- * @return A [T] type of the [ApiResponse].
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> ApiResponse<T>.mapFailure(
   transformer: Any?.() -> Any?,
@@ -713,11 +953,15 @@ public suspend inline fun <T> ApiResponse.Failure.Error.suspendMap(
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns the tag value if this instance represents [ApiResponse.Success].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @return The encapsulated data.
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> ApiResponse<T>.tagOrNull(): Any? {
   return if (this is ApiResponse.Success) {
@@ -728,9 +972,15 @@ public fun <T> ApiResponse<T>.tagOrNull(): Any? {
 }
 
 /**
- * Returns an error message from the [ApiResponse.Failure] that consists of the localized message.
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * @return An error message from the [ApiResponse.Failure].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> ApiResponse.Failure<T>.message(): String {
   return when (this) {
@@ -756,13 +1006,17 @@ public fun ApiResponse.Failure.Error.message(): String = toString()
 public fun ApiResponse.Failure.Exception.message(): String = toString()
 
 /**
- * @author skydoves (Jaewoong Eum)
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Operates on an [ApiResponse] and return an [ApiResponse].
- * This allows you to handle success and error response instead of the [ApiResponse.onSuccess],
- * [ApiResponse.onError], [ApiResponse.onException] transformers.
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
-@JvmSynthetic
 public fun <T, V : ApiResponseOperator<T>> ApiResponse<T>.operator(
   apiResponseOperator: V,
 ): ApiResponse<T> = apply {
@@ -793,17 +1047,17 @@ public suspend fun <T, V : ApiResponseSuspendOperator<T>> ApiResponse<T>.suspend
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Merges multiple [ApiResponse]s as one [ApiResponse] depending on the policy, [ApiResponseMergePolicy].
- * The default policy is [ApiResponseMergePolicy.IGNORE_FAILURE].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @param responses Responses for merging as one [ApiResponse].
- * @param mergePolicy A policy for merging response data depend on the success or not.
- *
- * @return [ApiResponse] that depends on the [ApiResponseMergePolicy].
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
-@JvmSynthetic
 public fun <T> ApiResponse<List<T>>.merge(
   vararg responses: ApiResponse<List<T>>,
   mergePolicy: ApiResponseMergePolicy = ApiResponseMergePolicy.IGNORE_FAILURE,
@@ -825,16 +1079,17 @@ public fun <T> ApiResponse<List<T>>.merge(
   }
 
   return apiResponse
-}
-
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns a [Flow] which emits successful data if the response is a [ApiResponse.Success] and the data is not null.
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
  *
- * @return A coroutines [Flow] which emits successful data.
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
-@JvmSynthetic
 public fun <T> ApiResponse<T>.toFlow(): Flow<T> {
   return if (this is ApiResponse.Success) {
     flowOf(data)

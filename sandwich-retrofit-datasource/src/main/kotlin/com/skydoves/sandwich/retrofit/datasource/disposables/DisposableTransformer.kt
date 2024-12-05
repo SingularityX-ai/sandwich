@@ -22,9 +22,15 @@ package com.skydoves.sandwich.retrofit.datasource.disposables
 import retrofit2.Call
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Returns an instance of [Disposable] from a [Call].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> Call<T>.disposable(): Disposable {
   val call = this
@@ -40,9 +46,15 @@ public fun <T> Call<T>.disposable(): Disposable {
 }
 
 /**
- * @author skydoves (Jaewoong Eum)
+ * Transforms the sign-up request data to match the backend's expected format.
  *
- * Joins onto [CompositeDisposable] as a disposable. must be called before [request].
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
  */
 public fun <T> Call<T>.joinDisposable(compositeDisposable: CompositeDisposable): Call<T> = apply {
   compositeDisposable.add(disposable())

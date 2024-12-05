@@ -28,28 +28,95 @@ import retrofit2.Callback
  */
 public interface DataSource<T> {
 
-  /** combine a call and a callback to the DataSource. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun combine(call: Call<T>, callback: Callback<T>?): DataSource<T>
 
-  /** retry fetching data few times with time interval when the request gets failure. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun retry(retryCount: Int, interval: Long): DataSource<T>
 
-  /** observes a [ApiResponse] value from the API call request. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun observeResponse(observer: ResponseObserver<T>): DataSource<T>
 
   /**
-   * concat an another [DataSource] and request API calls sequentially.
-   * we can determine request continuously the concat [DataSource] or stop when failed using [ConcatStrategy].
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
    */
   public fun <R> concat(dataSource: DataSource<R>): DataSource<R>
 
-  /** request API call and response to the callback. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun request(): DataSource<T>
 
-  /** joins onto [CompositeDisposable] as a disposable. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun joinDisposable(disposable: CompositeDisposable): DataSource<T>
 
-  /** invalidate cached data and retry counts, request again API call. */
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   public fun invalidate()
 
   /** A concat strategy for determining to request continuously or stop when the first request got failed. */

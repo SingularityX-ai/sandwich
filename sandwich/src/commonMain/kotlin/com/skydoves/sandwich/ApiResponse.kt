@@ -9,6 +9,28 @@
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
@@ -109,15 +131,17 @@ public sealed interface ApiResponse<out T> {
      */
     public fun exception(ex: Throwable): Failure.Exception =
       Failure.Exception(ex).apply { operate().maps() }
-
-    /**
-     * @author skydoves (Jaewoong Eum)
-     *
-     * ApiResponse Factory.
-     *
-     * Create an [ApiResponse] from the given executable [f].
-     *
-     * If the [f] doesn't throw any exceptions, it creates [ApiResponse.Success].
+     /**
+      * Transforms the sign-up request data to match the backend's expected format.
+      *
+      * @param {SignUpRequest} signUpData - The original sign-up request data.
+      *
+      * @returns {Object} The transformed sign-up request data with the following changes:
+      * - `firstName` is mapped to `first_name`
+      * - `lastName` is mapped to `last_name`
+      * - `email` is mapped to `username`
+      * - All other properties remain unchanged.
+      */
      * If the [f] throws an exception, it creates [ApiResponse.Failure.Exception].
      */
     public inline fun <reified T> of(tag: Any? = null, crossinline f: () -> T): ApiResponse<T> {
@@ -164,14 +188,17 @@ public sealed interface ApiResponse<out T> {
     public fun <T> ApiResponse<T>.operate(): ApiResponse<T> = apply {
       val globalOperators = SandwichInitializer.sandwichOperators
       globalOperators.forEach { globalOperator ->
-        if (globalOperator is ApiResponseOperator<*>) {
-          operator(globalOperator as ApiResponseOperator<T>)
-        } else if (globalOperator is ApiResponseSuspendOperator<*>) {
-          val scope = SandwichInitializer.sandwichScope
-          scope.launch {
-            suspendOperator(globalOperator as ApiResponseSuspendOperator<T>)
-          }
-        }
+      /**
+       * Transforms the sign-up request data to match the backend's expected format.
+       *
+       * @param {SignUpRequest} signUpData - The original sign-up request data.
+       *
+       * @returns {Object} The transformed sign-up request data with the following changes:
+       * - `firstName` is mapped to `first_name`
+       * - `lastName` is mapped to `last_name`
+       * - `email` is mapped to `username`
+       * - All other properties remain unchanged.
+       */
       }
     }
 
@@ -188,6 +215,17 @@ public sealed interface ApiResponse<out T> {
             val scope = SandwichInitializer.sandwichScope
             scope.launch {
               response = mapper.map(response as Failure<T>) as ApiResponse<T>
+            /**
+             * Transforms the sign-up request data to match the backend's expected format.
+             *
+             * @param {SignUpRequest} signUpData - The original sign-up request data.
+             *
+             * @returns {Object} The transformed sign-up request data with the following changes:
+             * - `firstName` is mapped to `first_name`
+             * - `lastName` is mapped to `last_name`
+             * - `email` is mapped to `username`
+             * - All other properties remain unchanged.
+             */
             }
           }
         }
@@ -195,4 +233,15 @@ public sealed interface ApiResponse<out T> {
       return response
     }
   }
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
 }

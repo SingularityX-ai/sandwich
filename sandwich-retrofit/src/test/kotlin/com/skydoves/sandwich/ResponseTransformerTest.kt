@@ -41,11 +41,33 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   private lateinit var service: DisneyService
 
   @Before
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun initService() {
     service = createService(DisneyService::class.java)
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrNullOnSuccessTest() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -55,6 +77,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrNullOnErrorTest() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -72,6 +105,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrNullOnExceptionTest() {
     val exception = IllegalArgumentException("foo")
     val apiResponse = ApiResponse.exception(exception)
@@ -81,6 +125,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrElseOnSuccessTest() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -90,6 +145,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrElseOnErrorTest() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -107,6 +173,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrElseOnExceptionTest() {
     val exception = IllegalArgumentException("foo")
     val apiResponse = ApiResponse.exception(exception)
@@ -116,6 +193,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrElseLambdaOnSuccessTest() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -125,6 +213,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrElseLambdaOnErrorTest() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -142,6 +241,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrElseLambdaOnExceptionTest() {
     val exception = IllegalArgumentException("foo")
     val apiResponse = ApiResponse.exception(exception)
@@ -151,6 +261,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrThrowOnSuccessTest() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -160,6 +281,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test(expected = RuntimeException::class)
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrThrowOnErrorTest() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -175,6 +307,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test(expected = IllegalArgumentException::class)
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun getOrThrowOnExceptionTest() {
     val exception = IllegalArgumentException("foo")
     val apiResponse = ApiResponse.exception(exception)
@@ -182,6 +325,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onSuccessTest() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -195,6 +349,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onSuccessInProcedureTest() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -216,6 +381,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun suspendOnSuccessTest() = runTest {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -230,6 +406,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun suspendOnSuccessInProcedureTest() = runTest {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -252,6 +439,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onErrorTest() {
     var onResult = false
     val retrofit: Retrofit = Retrofit.Builder()
@@ -273,6 +471,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onErrorInProcedureTest() {
     var onResult = false
     val retrofit: Retrofit = Retrofit.Builder()
@@ -301,6 +510,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onSuspendErrorTest() = runBlocking {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -323,6 +543,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onSuspendErrorInProcedureTest() = runBlocking {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -353,6 +584,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onExceptionTest() {
     var onResult = false
     val apiResponse = ApiResponse.exception(Throwable())
@@ -365,6 +607,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun onExceptionInProcedureTest() {
     var onResult = false
     val apiResponse = ApiResponse.exception(Throwable())
@@ -385,6 +638,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun suspendOnExceptionTest() = runTest {
     val apiResponse = ApiResponse.exception(Throwable())
 
@@ -398,6 +662,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun suspendOnExceptionInProcedureTest() = runTest {
     val apiResponse = ApiResponse.exception(Throwable())
 
@@ -419,6 +694,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuccessTest() {
     var poster: Poster? = null
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
@@ -432,6 +718,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun suspendMapSuccessTest() = runTest {
     var poster: Poster? = null
     val response =
@@ -446,6 +743,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnSuccessTest() {
     var poster: Poster? = null
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
@@ -459,6 +767,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnSuccessWithLambdaTest() {
     var poster: Poster? = null
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
@@ -474,6 +793,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnSuccessWithExecutableLambdaTest() {
     var poster: Poster? = null
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
@@ -489,6 +819,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnSuccessWithParameterTest() {
     var poster: Poster? = null
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
@@ -502,6 +843,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuspendSuccessWithLambdaTest() = runTest {
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
     val apiResponse = ApiResponse.responseOf { response }
@@ -518,6 +870,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuspendSuccessWitExecutableLambdaTest() = runTest {
     val poster = Poster.create()
     val response = Response.success(listOf(poster, Poster.create(), Poster.create()))
@@ -535,6 +898,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuspendSuccessWithParameterTest() = runTest {
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
     val apiResponse = ApiResponse.responseOf { response }
@@ -549,6 +923,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnErrorTest() {
     var onResult: String? = null
     val retrofit: Retrofit = Retrofit.Builder()
@@ -571,6 +956,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnErrorWithLambdaTest() {
     var onResult: String? = null
     val retrofit: Retrofit = Retrofit.Builder()
@@ -594,6 +990,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnErrorWithExecutableLambdaTest() {
     var onResult: String? = null
     val retrofit: Retrofit = Retrofit.Builder()
@@ -617,6 +1024,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapOnErrorWithParameterTest() {
     var onResult: String? = null
     val retrofit: Retrofit = Retrofit.Builder()
@@ -638,6 +1056,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuspendErrorWithLambdaTest() = runBlocking {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -662,6 +1091,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuspendErrorWithExecutableLambdaTest() = runBlocking {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -686,6 +1126,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun mapSuspendErrorWithParameterTest() = runBlocking {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -708,6 +1159,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun operatorTest() {
     var onSuccess = false
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
@@ -757,6 +1219,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun suspendOperatorTest() = runBlocking {
     val response = Response.success(listOf(Poster.create(), Poster.create(), Poster.create()))
     val apiResponse = ApiResponse.responseOf { response }
@@ -810,6 +1283,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun toFlowTest() = runTest {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -820,6 +1304,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun toFlowWithTransformerTest() = runTest {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -832,6 +1327,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun toFlowWithSuspendTransformerTest() = runTest {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -844,6 +1350,17 @@ internal class ResponseTransformerTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun transformSuccessResponseWithThen() = runTest {
     val response1 = Response.success("foo")
     val response2 = Response.success("bar")

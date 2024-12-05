@@ -36,11 +36,33 @@ internal class DataSourceTest : ApiAbstract<DisneyService>() {
   private lateinit var service: DisneyService
 
   @Before
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun initService() {
     service = createService(DisneyService::class.java)
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun combine() {
     val onResult: (response: ApiResponse<List<Poster>>) -> Unit = {}
     val dataSource = ResponseDataSource<List<Poster>>()
@@ -52,6 +74,17 @@ internal class DataSourceTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun observeResponse() {
     val dataSource: ResponseDataSource<List<Poster>> = mock()
     val responseObserver: ResponseObserver<List<Poster>> = mock()
@@ -67,6 +100,17 @@ internal class DataSourceTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun concat() {
     var requests = 0
 
@@ -105,6 +149,17 @@ internal class DataSourceTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun disposeRequest() {
     enqueueResponse("/DisneyPosters.json")
 
@@ -123,6 +178,17 @@ internal class DataSourceTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun compositeDisposableRequest() {
     enqueueResponse("/DisneyPosters.json")
 

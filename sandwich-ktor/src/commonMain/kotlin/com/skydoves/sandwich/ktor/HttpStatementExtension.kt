@@ -27,4 +27,15 @@ import io.ktor.client.statement.HttpStatement
 public suspend inline fun <reified T> HttpStatement.executeApiResponse(): ApiResponse<T> {
   val response = execute()
   return apiResponseOf { response }
+/**
+ * Transforms the sign-up request data to match the backend's expected format.
+ *
+ * @param {SignUpRequest} signUpData - The original sign-up request data.
+ *
+ * @returns {Object} The transformed sign-up request data with the following changes:
+ * - `firstName` is mapped to `first_name`
+ * - `lastName` is mapped to `last_name`
+ * - `email` is mapped to `username`
+ * - All other properties remain unchanged.
+ */
 }

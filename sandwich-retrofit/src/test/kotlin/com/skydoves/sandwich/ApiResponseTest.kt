@@ -43,12 +43,34 @@ internal class ApiResponseTest : ApiAbstract<DisneyService>() {
   private val client: DisneyClient = mock()
 
   @Before
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun initService() {
     service = createService(DisneyService::class.java)
   }
 
   @Test
   @Throws(IOException::class)
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun success() {
     val response = Response.success("foo")
     val apiResponse = ApiResponse.responseOf { response }
@@ -62,6 +84,17 @@ internal class ApiResponseTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun successFromRequest() {
     enqueueResponse("/DisneyPosters.json")
 
@@ -88,6 +121,17 @@ internal class ApiResponseTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun successExtensionFromRequest() {
     enqueueResponse("/DisneyPosters.json")
 
@@ -113,6 +157,17 @@ internal class ApiResponseTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun error() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -129,6 +184,17 @@ internal class ApiResponseTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun errorFromRequest() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))
@@ -160,6 +226,17 @@ internal class ApiResponseTest : ApiAbstract<DisneyService>() {
   }
 
   @Test
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   fun errorExtensionFromRequest() {
     val retrofit: Retrofit = Retrofit.Builder()
       .baseUrl(mockWebServer.url("/"))

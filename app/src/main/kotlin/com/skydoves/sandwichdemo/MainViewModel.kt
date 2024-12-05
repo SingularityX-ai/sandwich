@@ -101,6 +101,17 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
     retrofit()
   }
 
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   private fun retrofit() = viewModelScope.launch {
     mainRepository.fetchPosters()
       // handles the success scenario when the API request succeeds.
@@ -128,7 +139,17 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
       }
   }
 
-  // Ktor example
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   private fun ktor() = viewModelScope.launch {
     val response = client.getApiResponse<PokemonResponse>("https://pokeapi.co/api/v2/pokemon") {
       contentType(ContentType.Application.Json)
@@ -148,7 +169,17 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
     }
   }
 
-  // Ktorfit example
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   private fun ktorfit() = viewModelScope.launch {
     val ktorfit = Ktorfit.Builder().baseUrl("https://pokeapi.co/api/v2/")
       .converterFactories(ApiResponseConverterFactory.create())

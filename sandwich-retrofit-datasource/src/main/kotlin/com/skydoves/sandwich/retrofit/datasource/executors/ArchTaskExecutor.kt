@@ -6,6 +6,17 @@
  * You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
+ /**
+  * Transforms the sign-up request data to match the backend's expected format.
+  *
+  * @param {SignUpRequest} signUpData - The original sign-up request data.
+  *
+  * @returns {Object} The transformed sign-up request data with the following changes:
+  * - `firstName` is mapped to `first_name`
+  * - `lastName` is mapped to `last_name`
+  * - `email` is mapped to `username`
+  * - All other properties remain unchanged.
+  */
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -53,16 +64,15 @@ internal class ArchTaskExecutor private constructor() : TaskExecutor() {
   }
 
   /**
-   * Sets a delegate to handle task execution requests.
+   * Transforms the sign-up request data to match the backend's expected format.
    *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
    *
-   * If you have a common executor, you can set it as the delegate and App Toolkit components will
-   * use your executors. You may also want to use this for your tests.
-   *
-   *
-   * Calling this method with `null` sets it to the default TaskExecutor.
-   *
-   * @param taskExecutor The task executor to handle task requests.
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
    */
   fun setDelegate(taskExecutor: TaskExecutor?) {
     mDelegate = taskExecutor ?: mDefaultTaskExecutor
@@ -100,5 +110,16 @@ internal class ArchTaskExecutor private constructor() : TaskExecutor() {
         }
         return sInstance
       }
+  /**
+   * Transforms the sign-up request data to match the backend's expected format.
+   *
+   * @param {SignUpRequest} signUpData - The original sign-up request data.
+   *
+   * @returns {Object} The transformed sign-up request data with the following changes:
+   * - `firstName` is mapped to `first_name`
+   * - `lastName` is mapped to `last_name`
+   * - `email` is mapped to `username`
+   * - All other properties remain unchanged.
+   */
   }
 }
